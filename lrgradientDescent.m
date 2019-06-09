@@ -1,4 +1,4 @@
-function [theta, J_history] = gradientDescent(X, y, theta, alpha, num_iters)
+function [theta, J_history] = lrgradientDescent(X, y, theta, alpha, num_iters)
 
 m = length(y); 
 J_history = zeros(num_iters, 1);
@@ -13,9 +13,9 @@ theta=theta-(alpha*sum(cal)/m)';
 
     % ============================================================
 
-    % Save the cost J in every iteration    
+    % Save the lrcost J in every iteration    
 
-    J_history(iter)=cost(X, y, theta);
+    J_history(iter)=lrcost(X, y, theta);
    
     
 
